@@ -1,0 +1,26 @@
+{
+  "name": "uiautomation",
+  "version": "1.0.0",
+  "description": "UI Automation of an Order Placement Flow from E-commerce Website",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cyexecute": "cypress run --env allure=true --headed",
+    "generateallurereport": "allure generate allure-results --clean  -o allure-report && npm run launchallureReport",
+    "test": "npm run cyexecute && npm run posttest",
+    "posttest": "npm run generateallurereport",
+    "launchallureReport": "allure serve"
+  },
+  "author": "Anoop",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "allure-commandline": "^2.13.8",
+    "cypress": "^8.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/integration/features_cucumber",
+    "nonGlobalStepDefinitions": false
+  }
+}

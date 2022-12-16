@@ -1,0 +1,12 @@
+{
+ "env":{ 
+        "url": "https://magento.softwaretestingboard.com/"
+       }, 
+    "testFiles": "**/*.feature",
+    "twoSecondsWait": 2000,
+    "pageLoadTimeout": 30000,
+    "defaultCommandTimeout": 30000
+}
+
+
+
